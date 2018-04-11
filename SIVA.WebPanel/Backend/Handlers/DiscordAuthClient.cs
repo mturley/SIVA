@@ -94,10 +94,10 @@ namespace OAuth2.Client.Impl
         {
             var response = JObject.Parse(content);
             var userInfo = new UserInfo();
-            var userAvaterUrl = "https://cdn.discordapp.com/avatars/" + response.SelectToken("id") + "/"+response.SelectToken("avatar")+".png";
-            userInfo.AvatarUri.Normal = userAvaterUrl;
-            userInfo.AvatarUri.Large = userAvaterUrl + "?size=" + 256;
-            userInfo.AvatarUri.Small = userAvaterUrl + "?size="+64;
+            var userAvatarUrl = "https://cdn.discordapp.com/avatars/" + response.SelectToken("id") + "/"+response.SelectToken("avatar")+".png";
+            userInfo.AvatarUri.Normal = userAvatarUrl;
+            userInfo.AvatarUri.Large = userAvatarUrl + "?size=" + 256;
+            userInfo.AvatarUri.Small = userAvatarUrl + "?size="+64;
 
             
             userInfo.FirstName = response.SelectToken("username")?.ToString();
