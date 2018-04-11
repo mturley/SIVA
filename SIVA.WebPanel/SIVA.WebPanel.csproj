@@ -3,11 +3,52 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Frontend\addsiva.html" />
+    <None Remove="Frontend\css\materialize.css" />
+    <None Remove="Frontend\css\materialize.min.css" />
+    <None Remove="Frontend\css\New Text Document.txt" />
+    <None Remove="Frontend\css\projects-style.css" />
+    <None Remove="Frontend\img\discord.png" />
+    <None Remove="Frontend\img\Mountain.png" />
+    <None Remove="Frontend\img\onultz-nav.png" />
+    <None Remove="Frontend\img\projects-nav.png" />
+    <None Remove="Frontend\img\SIVA.png" />
+    <None Remove="Frontend\img\SIVAb.png" />
+    <None Remove="Frontend\index.html" />
+    <None Remove="Frontend\js\init.js" />
+    <None Remove="Frontend\js\materialize.js" />
+    <None Remove="Frontend\js\materialize.min.js" />
+    <None Remove="Frontend\js\onultz.js" />
+    <None Remove="Frontend\js\projects-onultz.js" />
+    <None Remove="Frontend\LICENSE" />
+    <None Remove="Frontend\login.html" />
+    <None Remove="Frontend\session.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Frontend\addsiva.html" />
+    <EmbeddedResource Include="Frontend\css\materialize.css" />
+    <EmbeddedResource Include="Frontend\css\materialize.min.css" />
+    <EmbeddedResource Include="Frontend\css\New Text Document.txt" />
+    <EmbeddedResource Include="Frontend\css\projects-style.css" />
+    <EmbeddedResource Include="Frontend\img\discord.png" />
+    <EmbeddedResource Include="Frontend\img\Mountain.png" />
+    <EmbeddedResource Include="Frontend\img\onultz-nav.png" />
+    <EmbeddedResource Include="Frontend\img\projects-nav.png" />
+    <EmbeddedResource Include="Frontend\img\SIVA.png" />
+    <EmbeddedResource Include="Frontend\img\SIVAb.png" />
+    <EmbeddedResource Include="Frontend\index.html" />
+    <EmbeddedResource Include="Frontend\js\init.js" />
+    <EmbeddedResource Include="Frontend\js\materialize.js" />
+    <EmbeddedResource Include="Frontend\js\materialize.min.js" />
+    <EmbeddedResource Include="Frontend\js\onultz.js" />
+    <EmbeddedResource Include="Frontend\js\projects-onultz.js" />
+    <EmbeddedResource Include="Frontend\LICENSE" />
+    <EmbeddedResource Include="Frontend\login.html" />
+    <EmbeddedResource Include="Frontend\session.html" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="OAuth2" Version="0.8.40" />
     <PackageReference Include="Ultz.SimpleServer" Version="0.1.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Frontend\" />
   </ItemGroup>
 </Project>
