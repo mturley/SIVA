@@ -35,7 +35,7 @@ namespace SIVA.Core.JsonFiles
         public int EmbedColour2 { get; set; }
         public int EmbedColour3 { get; set; }
         public bool MassPengChecks { get; set; }
-        public int ModlogCase { get; set; }
+        public int ModlogCase { get; set; } // not used
         public bool Antilink { get; set; }
         public bool VerifiedGuild { get; set; }
         public ulong ModRole { get; set; }

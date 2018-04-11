@@ -31,6 +31,8 @@ namespace SIVA.WebPanel.Backend.Handlers.Api
             // - Roles: <roles>
             // - CommandPrefix: <prefix>
             // - WelcomeColour: <colour as hex>
+            // - Embed Colour: <input type="color" id="html5colorpicker" class="" style="background: rgba(0,0,0,0); border: none;" value="#<colour as hex>" style="width:85%;" onChange="updateAllColours();">
+            // -               or <a href="">Unavailable</a>
         }
     }
 }

@@ -12,17 +12,55 @@
 </head>
 <body>
 	
-  <!-- App Switcher -->
-	<div id="exit" class="modal">
+	<input type="hidden" id="guildId" value="[GuildId]" />
+	<input type="hidden" id="auth" value="[Token]" />
+	
+	<div id="patreon" class="modal">
     <div class="modal-content">
-      <h4>Exit Projects?</h4>
-      <p>Are you sure you want to exit Projects and reutrn to the Ultz Online home page?</p>
+      <h4>This is a premium feature!</h4>
+      <p>Only our patreon backers have access to this feature. Do you want to go to our patreon page?</p>
     </div>
     <div class="modal-footer">
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
       <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
     </div>
   </div>
+          
+		<div id="levels" class="modal">
+    <div class="modal-content">
+      <h4>[LevelsBox] Levels?</h4>
+      <p></p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onClick="updateLevels();">Ok</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+    </div>
+  </div>
+	
+	<div id="tod" class="modal">
+    <div class="modal-content">
+      <h4>[TruthOrDareBox] Truth Or Dare?</h4>
+      <p></p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onClick="updateTod();">Ok</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+    </div>
+  </div>
+	
+	<div id="antilink" class="modal">
+    <div class="modal-content">
+      <h4>[AntilinkBox] Antilink?</h4>
+      <p></p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onClick="updateAntilink();">Ok</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+    </div>
+  </div>
+	
+	  
+          
           
           
   <!-- End App Switcher -->
@@ -49,8 +87,8 @@
     <div class="nav-wrapper">
 		<a id="logo-container" href="#" class="brand-logo onultz-logo-container left red center-align" onClick="exitModal()"><img width="23" height="23" src="img/SIVAb.png" class="onultz-logo" /></a>
 	 <ul>
-		<li>
-			<a href="#" data-target="projects" class="dropdown-trigger onultz-project-switcher center-align red darken-3 truncate">
+		<li  class="">
+			<a id="guildselect" href="#" data-target="projects" class="dropdown-trigger onultz-project-switcher center-align red darken-3 truncate tooltipped" data-position="bottom" data-tooltip="Pick a guild!">
             [GuildName]
             </a>
 			
@@ -98,10 +136,10 @@
       <div class="card small">
         <div class="card-content">
           <span class="card-title">Features</span>
-        <p>Levels: <a href="">Enabled</a></p>
-        <p>Truth Or Dare: <a href="">Enabled</a></p>
-			<p>Verified*: <a>Not Verified</a></p>
-			<p>Antilink: <a>Disabled</a></p>
+        <p>Levels: <a href="">[Levels]</a></p>
+        <p>Truth Or Dare: <a href="">[Levels]</a></p>
+			<p>Verified*: <a>[Verified]</a></p>
+			<p>Antilink: <a>[Antilink]</a></p>
 			<p>Join/Leave messages: <a>Manage...</a></p>
 			<p class="grey-text">* Patrons only</p>
         </div>
@@ -114,7 +152,7 @@
         <p>Admin Role: admin (<a href="">change</a>)</p>
         <p>Moderator Role: mod (<a href="">change</a>)</p>
         <p>Command Prefix: prefix (<a href="">change</a>)</p>
-			<p>Welcome Colour: <input type="color" id="html5colorpicker" class="" style="background: rgba(0,0,0,0); border: none;" value="#ff0000" style="width:85%;" onChange="updateWelcomeColour();"></form></p>
+			<p>Welcome Colour: <input type="color" id="welcomecolor" class="" style="background: rgba(0,0,0,0); border: none;" value="#ff0000" style="width:85%;" onChange="updateWelcomeColour();"></form></p>
       </div>
     </div>
   </div>
