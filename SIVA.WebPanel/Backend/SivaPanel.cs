@@ -23,7 +23,7 @@ namespace SIVA.WebPanel.Backend
             Server = ServerBuilder.NewServer()
                 .NewHost(443)
                 .At(IPAddress.Any)
-                .With(new Handler())
+                .With(Handlers.ToArray())
                 .AddToServer()
                 .Build();
         }
