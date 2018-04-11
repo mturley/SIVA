@@ -27,6 +27,7 @@ namespace SIVA.Backend.Handlers
             if (context.Request.Method == "GET")
             {
                 context.Response.OutputStream.WriteFile(context.Request.RawUrl);
+                context.Response.Close();
             }
             else
             {
