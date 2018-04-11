@@ -54,3 +54,6 @@ nav {
 .nav-wrapper ul {
 	margin-left: 50px;
 }
+.card {
+	height:100%;
+}

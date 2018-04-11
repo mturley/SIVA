@@ -1,16 +1,23 @@
-function exitModal(){
-	M.Modal.getInstance(document.getElementById("exit")).open();
-}
+function updateWelcomeColour(){
+	M.toast({html: 'Changing welcome colour'});
+	var url = "login.html";
+	var method = "POST";
+	var postData = "Some data";
+	var shouldBeAsync = true;
 
-function openProfile() {
-	if (window.getComputedStyle(document.getElementById("profile"), null).getPropertyValue("display") != "none"){
-		M.Sidenav.getInstance(document.getElementById("mobileprofile")).open();
-	}else{
-		M.Dropdown.getInstance(document.getElementById("pcprofile")).open();
+	var request = new XMLHttpRequest();
+	request.onload = function () {
+		var status = request.status; 
+		var data = request.responseText; 
+		M.toast({html: ''+request.statusText});
 	}
-}
 
-function closeProfile(){
-	M.Dropdown.getInstance(document.getElementById("pcprofile")).close();
-	M.Sidenav.getInstance(document.getElementById("mobileprofile")).close();
+	request.open(method, url, shouldBeAsync);
+
+	request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+	request.send(postData);
+	
+}
+function updateAllColours(){
+	
 }
