@@ -5,32 +5,30 @@ using SimpleServer;
 using SimpleServer.Logging;
 using System.Net;
 using SimpleServer.Handlers;
+using SIVA.Backend.Handlers;
 
 namespace SIVA.WebPanel.Backend
 {
     public class SivaPanel
     {
         public static SivaPanel Instance { get; set; } = new SivaPanel();
-        public SimpleServer.SimpleServer Server { get; } 
-        public List<IHandler> Handlers { get; set; } = new List<IHandler>();
+        public static SimpleServer.SimpleServer Server { get; set; } 
+        public static List<IHandler> Handlers { get; set; } = new List<IHandler>();
         public List<TextWriter> Loggers { get; set; }
         
-        public SivaPanel()
+
+        public static void StartPanel()
         {
-            Instance = this;
             SimpleServer.SimpleServer.Initialize();
             Log.AddWriter(Console.Out);
             Server = ServerBuilder.NewServer()
                 .NewHost(443)
                 .At(IPAddress.Any)
                 .With(Handlers.ToArray())
+                .With(new Handler())
+                .With(new FileHandler())
                 .AddToServer()
-                .Build();
-        }
-
-        public void StartPanel()
-        {
-            Server.Start();
+                .BuildAndStart();
         }
 
         public void StopPanel()
