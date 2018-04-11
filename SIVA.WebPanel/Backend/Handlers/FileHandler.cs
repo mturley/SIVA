@@ -26,11 +26,14 @@ namespace SIVA.Backend.Handlers
         {
             if (context.Request.Method == "GET")
             {
+                context.Request.Headers["Content-Type"] =
+                    Helper.GetMimeType(context.Request.RawUrl.TrimEnd('/').Split('/').Last().Split('.').Last());
                 context.Response.OutputStream.WriteFile(context.Request.RawUrl);
                 context.Response.Close();
             }
             else
             {
+                context.Response.Headers["Content-Type"] = "text/html";
                 context.Response.StatusCode = 405;
                 context.Response.ReasonPhrase = "Method Not Allowed";
                 var sw = new StreamWriter(context.Response.OutputStream);

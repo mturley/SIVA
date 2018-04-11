@@ -2,6 +2,7 @@
 using System;
 using System.Threading.Tasks;
 using Discord;
+using SimpleServer;
 using SIVA.WebPanel.Backend;
 
 namespace SIVA.Core.Bot
@@ -13,6 +14,7 @@ namespace SIVA.Core.Bot
 
         private static void Main()
         {
+            SimpleServerConfig.IgnoreSendExceptions = false;
             Console.Title = "SIVA";
             Console.CursorVisible = false;
             Console.ForegroundColor = ConsoleColor.Red;

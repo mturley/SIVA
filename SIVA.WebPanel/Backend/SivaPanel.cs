@@ -22,7 +22,7 @@ namespace SIVA.WebPanel.Backend
             SimpleServer.SimpleServer.Initialize();
             Log.AddWriter(Console.Out);
             Server = ServerBuilder.NewServer()
-                .NewHost(443)
+                .NewHost(8443)
                 .At(IPAddress.Any)
                 .With(Handlers.ToArray())
                 .With(new Handler())
