@@ -10,9 +10,6 @@ function updateWelcomeColour(){
 		var status = request.status; 
 		var data = request.responseText; 
 		M.toast({html: ''+request.statusText});
-		if (status == 200){
-			location.reload();
-		}
 	}
 
 	request.open(method, url, shouldBeAsync);
@@ -72,7 +69,7 @@ function updateTod(){
 	request.send(postData);
 }
 function updateAntilink(){
-		M.toast({html: 'Updating levels...'});
+		M.toast({html: 'Updating antilink...'});
 	var url = "antilink.action";
 	var method = "POST";
 	var postData = document.getElementById("guildId").value;
@@ -95,7 +92,7 @@ function updateAntilink(){
 	request.send(postData);
 }
 function updateMessages(){
-		M.toast({html: 'Updating levels...'});
+		M.toast({html: 'Updating messages...'});
 	var url = "tod.action";
 	var method = "POST";
 	var postData = document.getElementById("guildId").value;
