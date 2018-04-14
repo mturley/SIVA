@@ -6,6 +6,7 @@ using SimpleServer.Logging;
 using System.Net;
 using SimpleServer.Handlers;
 using SIVA.Backend.Handlers;
+using SIVA.WebPanel.Backend.Handlers.Api;
 
 namespace SIVA.WebPanel.Backend
 {
@@ -21,11 +22,13 @@ namespace SIVA.WebPanel.Backend
         {
             SimpleServer.SimpleServer.Initialize();
             Log.AddWriter(Console.Out);
+            Handlers.Add(new LoginHandler());
+            Handlers.Add(new DiscordCallbackHandler());
+            Handlers.Add(new TempHandler());
             Server = ServerBuilder.NewServer()
                 .NewHost(8443)
                 .At(IPAddress.Any)
                 .With(Handlers.ToArray())
-                .With(new Handler())
                 .With(new FileHandler())
                 .AddToServer()
                 .BuildAndStart();

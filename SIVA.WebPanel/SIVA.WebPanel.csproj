@@ -49,6 +49,6 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="OAuth2" Version="0.8.40" />
-    <PackageReference Include="Ultz.SimpleServer" Version="0.1.1" />
+    <PackageReference Include="Ultz.SimpleServer" Version="0.1.3" />
   </ItemGroup>
 </Project>
