@@ -87,5 +87,6 @@ namespace SIVA.WebPanel.Backend.Handlers.Api
         public string Key { get; set; }
         public string DiscordKey { get; set; }
         public bool New { get; set; } = true;
+        public SivaGuild SelectedGuild { get; set; } = SivaGuild.Empty;
     }
 }

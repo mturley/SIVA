@@ -6,6 +6,8 @@ using SimpleServer.Internals;
 
 namespace SIVA.WebPanel.Backend.Handlers.Api
 {
+    [SivaIgnore]
+    [Obsolete]
     public class GuildInfoHandler : IHandler
     {
         public bool CanHandle(SimpleServerRequest request)

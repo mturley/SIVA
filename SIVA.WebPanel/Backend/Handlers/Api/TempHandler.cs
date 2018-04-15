@@ -8,6 +8,7 @@ using SimpleServer.Internals;
 
 namespace SIVA.WebPanel.Backend.Handlers.Api
 {
+    [SivaIgnore]
     public class TempHandler : IHandler
     {
         public bool CanHandle(SimpleServerRequest request)

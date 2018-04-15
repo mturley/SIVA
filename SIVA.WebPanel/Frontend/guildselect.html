@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Ultz</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/projects-style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+	
+	<input type="hidden" id="guildId" value="[GuildId]" />
+	<input type="hidden" id="auth" value="[Token]" />
+	
+	<div id="patreon" class="modal">
+    <div class="modal-content">
+      <h4>This is a premium feature!</h4>
+      <p>Only our patreon backers have access to this feature. Do you want to go to our patreon page?</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+    </div>
+  </div>
+          
+		<div id="levels" class="modal">
+    <div class="modal-content">
+      <h4>[LevelsBox] Levels?</h4>
+      <p></p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onClick="updateLevels();">Ok</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+    </div>
+  </div>
+	
+	<div id="tod" class="modal">
+    <div class="modal-content">
+      <h4>[TruthOrDareBox] Truth Or Dare?</h4>
+      <p></p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onClick="updateTod();">Ok</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+    </div>
+  </div>
+	
+	<div id="antilink" class="modal">
+    <div class="modal-content">
+      <h4>[AntilinkBox] Antilink?</h4>
+      <p></p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onClick="updateAntilink();">Ok</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+    </div>
+  </div>
+	
+	<div id="antilink" class="modal">
+    <div class="modal-content">
+      <h4>Change Messages</h4>
+      <p></p>
+          <input value="[JoinMessage]" id="join" name="join" type="text" class="validate">
+          <label for="join">Join Message</label>
+          <input value="[LeaveMessage]" id="leave" name="leave" type="text" class="validate">
+          <label for="leave">Leave Message</label>
+          <input id="chan" name="chan" type="text" class="validate">
+          <label value="[Channel]" for="chan">Channel</label>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onClick="updateMessages();">Ok</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+    </div>
+  </div>
+	
+	  
+          
+          
+          
+  <!-- End App Switcher -->
+  <!-- PC Profile Dropdown -->
+	<ul id="pcprofile" class="dropdown-content">
+    <li><a href="#!">My Profile</a></li>
+    <li><a href="#!">Manage Account</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">Log Out</a></li>
+    <li><a href="#!">Close</a></li>
+  </ul>
+	<!-- End PC Profile Dropdown -->
+	
+  <!-- Mobile Profile Sidenav -->
+	<ul id="mobileprofile" class="sidenav">
+    <li><a href="#!">Second Link</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
+  <!-- End Mobile Profile Sidenav -->
+  <!-- Nav -->
+  <nav class="red" role="navigation">
+    <div class="nav-wrapper">
+		<a id="logo-container" href="https://greem.xyz" class="brand-logo onultz-logo-container left red center-align" onClick="exitModal()"><img width="23" height="23" src="img/SIVAb.png" class="onultz-logo" /></a>
+	 <ul>
+		<li  class="">
+			<a id="guildselect" href="index.html" data-target="projects" class="dropdown-trigger onultz-project-switcher center-align red darken-3 truncate tooltipped pulse" data-position="bottom" data-tooltip="Pick a guild!">
+            Guild Select
+            </a>
+			
+			<ul id="projects" class="dropdown-content" tabindex="0">
+            <li tabindex="0"><a>1.0.0-beta</a></li>
+            <li tabindex="0"><a href="http://archives.materializecss.com/0.100.2/">0.100.2</a></li>
+				
+          </ul>
+		 </li>
+		 <li>
+		 </li>
+		</ul>
+      
+	  <!--
+	  <ul class="right hide-on-med-and-down onultz-pc-profile-container">
+	    <li class="dropdown-trigger onultz-pc-profile valign-wrapper" data-target="pcprofile"><a href="#" onclick="" class="truncate right-align">Bradley Glanville-Hodgetts</a><img src="img/onultz-nav.png" height="32" class="circle valign"/></li>
+			
+	  </ul>
+	  -->
+		
+      
+		
+	  <ul class="right hide-on-large-only onultz-apps" style="" data-target="mobile" id="profile">
+      
+		  <li><a href="#" onclick="openProfile();"><i class="material-icons" style="height: inherit;line-height: inherit;">person</i></a></li>
+			
+      </ul>
+		
+    </div>
+  </nav>
+  <!-- End Nav -->
+	
+	
+	
+	
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+		<h3>Please select a guild.</h3>
+		<div class="divider"></div>
+  </div>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/projects-onultz.js"></script>
+
+  </body>
+</html>

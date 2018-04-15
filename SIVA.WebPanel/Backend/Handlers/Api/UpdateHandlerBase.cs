@@ -23,8 +23,8 @@ namespace SIVA.WebPanel.Backend.Handlers.Api
         {
             if (!context.Request.Headers.ContainsKey("X-Siva-Token"))
                 MissingHeader(context);
-            else if (!LoginHandler.Sessions.ContainsKey(context.Request.Headers["X-Siva-Token"])))
-                SessionDoesNotExist();
+            else if (!LoginHandler.Sessions.ContainsKey(context.Request.Headers["X-Siva-Token"]))
+                SessionDoesNotExist(context);
         }
         private static void MissingHeader(SimpleServerContext context)
         {

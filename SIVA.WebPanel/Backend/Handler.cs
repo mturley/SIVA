@@ -6,7 +6,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using SIVA.WebPanel.Backend;
 
+[SivaIgnore]
 public class Handler : IHandler
 {
     public bool CanHandle(SimpleServerRequest request)
